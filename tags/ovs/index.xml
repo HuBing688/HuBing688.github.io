@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ovs on ExampleSite</title>
+    <link>https://examplesite.com/tags/ovs/</link>
+    <description>Recent content in Ovs on ExampleSite</description>
+    <image>
+      <title>ExampleSite</title>
+      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 28 Sep 2022 16:47:43 +0800</lastBuildDate>
+    <atom:link href="https://examplesite.com/tags/ovs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OVS添加自定义action</title>
+      <link>https://examplesite.com/posts/org_11_ovs_add_action/</link>
+      <pubDate>Mon, 19 Sep 2022 21:27:00 +0800</pubDate>
+      <guid>https://examplesite.com/posts/org_11_ovs_add_action/</guid>
+      <description>&lt;h2 id=&#34;版本及环境&#34;&gt;版本及环境&lt;/h2&gt;
+&lt;p&gt;ovs 2.13.7&lt;/p&gt;
+&lt;p&gt;ubuntu 18.04&lt;/p&gt;
+&lt;p&gt;与前一篇ovs安装的环境一致，里面所提及的脚本本篇也会用到&lt;/p&gt;
+&lt;p&gt;看这篇需要有一定的OVS基础，基本概念必须要了解。&lt;/p&gt;
+&lt;h2 id=&#34;基本概念&#34;&gt;基本概念&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;这里讲的action并不是openflow action, 而是数据平面的执行action&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;OVS中流主要从两个部分转发：内核空间和用户空间&lt;/p&gt;
+&lt;p&gt;内核空间主要是通过缓存的流表转发流，若在缓存流表中未找到，则到用户空间的完整流表中找。&lt;/p&gt;
+&lt;p&gt;用户空间对于匹配的流会添加一份缓存到内核空间的流表中;&lt;/p&gt;
+&lt;p&gt;若用户空间的完整流表也没有匹配的，就把这个数据包的相关信息发到控制器。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一个OpenFlow flow有两部分的组成：match, action&lt;/p&gt;
+&lt;p&gt;match用于匹配到达的数据包，action是对匹配到的数据包执行相应的动作&lt;/p&gt;
+&lt;p&gt;下面这个图是流表的例子&lt;/p&gt;
+&lt;figure&gt;
+        &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/pbzXOr.png&#34;/&gt; 
+    &lt;/figure&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下图为已有的一些action&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/c5B1k9.png&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;为什么需要自定义action: 当然是已有的满足不了需求了！！！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;基本步骤&#34;&gt;基本步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;先在OVS社区进行讨论（挺难找的）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在ofp-action.c中添加新的action代码&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;添加parse/encode/decode代码，这是为了使ovs-ofctl和控制器使用新加的action&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在内核datapath部分实现新加的action&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在ovs-vswitchd中添加action的用户层面实现&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将action翻译到datapath&lt;/p&gt;
+&lt;figure&gt;
+        &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/g6VGEj.png&#34;/&gt; 
+    &lt;/figure&gt;
+
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;流表的添加过程概述&#34;&gt;流表的添加过程概述&lt;/h2&gt;
+&lt;p&gt;对于下面这个流表&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/iLTIl2.png&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;p&gt;它的添加过程为：&lt;/p&gt;
+&lt;p&gt;控制平面（控制器，还有在mininet中的操作命令行中）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;我们的流表字符串会被先编码为ofpacts&lt;/li&gt;
+&lt;li&gt;再将ofpacts编码为OpenFlow actions&lt;/li&gt;
+&lt;li&gt;将flow_mod 消息发送到ovs-vswitchd&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;数据平面：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;将OpenFlow actions 解码为 ofpacts&lt;/li&gt;
+&lt;li&gt;把flow放到交换机的规则分类器中（这里要表达的意思其实是：把转换后的ofpacts放到流表中，当有数据包来了后就会进行流表匹配）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;自定义action代码实现&#34;&gt;自定义action代码实现&lt;/h2&gt;
+&lt;h3 id=&#34;一-添加-action-定义--openflow&#34;&gt;一、添加 action 定义(OpenFlow)&lt;/h3&gt;
+&lt;h4 id=&#34;lib-ofp-actions-dot-c中添加代码&#34;&gt;lib/ofp-actions.c中添加代码&lt;/h4&gt;
+&lt;p&gt;这里添加我们自定义action的名字，这个名字是OpenFlow action的名字，它并不是OVS action的名字。OpenFlow action 需要解码才可转换为 OVS action。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;enum&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ofp_raw_action_type&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;cm&#34;&gt;/* ... */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;cm&#34;&gt;/* NX1.3+(47): struct nx_action_decap, ... */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;NXAST_RAW_DECAP&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;cm&#34;&gt;/* OF1.0+(30): uint32_t. */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;OFPAT_RAW_PVL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;//这行是我们的，注释删掉
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;cm&#34;&gt;/* NX1.3+(48): void. */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;NXAST_RAW_DEC_NSH_TTL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;cm&#34;&gt;/* ... */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这里的注释  &lt;em&gt;&lt;strong&gt;* OF1.0+(30): uint32_t. *&lt;/strong&gt;&lt;/em&gt;   是必要的，它声明了OF消息的类型，序号以及构造OF消息所需要的参数，ovs会根据这里声明的类型在编译时会在/lib/ofp-actions.inc2这个文件里按put_OFAT_##ENUM的形式自动生成函数,这里生成的函数名为put_OFAT_PVL, 这个函数的第一个参数是 ofpbuf *, 其他的参数为注释中指定的参数(指定为void时则只有一个参数),因此未按指定格式注释会出错.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>mininet , ovs , ryu 分别进行源码安装</title>
+      <link>https://examplesite.com/posts/05_ovs_install/</link>
+      <pubDate>Sun, 28 Aug 2022 22:01:00 +0800</pubDate>
+      <guid>https://examplesite.com/posts/05_ovs_install/</guid>
+      <description>&lt;h2 id=&#34;ovs安装&#34;&gt;OVS安装&lt;/h2&gt;
+&lt;h3 id=&#34;ovs与linux内核版本对应&#34;&gt;ovs与linux内核版本对应&lt;/h3&gt;
+&lt;p&gt;OVS版本是需要与linux内核版本对应的，否则会导致内核函数与OVS调用的函数不匹配，简称装不上。
+&lt;a href=&#34;https://docs.openvswitch.org/en/latest/faq/releases/&#34;&gt;https://docs.openvswitch.org/en/latest/faq/releases/&lt;/a&gt;
+linux 内核版本查看&lt;code&gt;uname -r&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安装过程&#34;&gt;安装过程&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;这里要注意，如果下载的是官网的压缩文件，则不用./boot.sh直接从./configure开始即可， 如果是在github上下载的，则需要./boot.sh再configure&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;官方教程: &lt;a href=&#34;https://docs.openvswitch.org/en/latest/intro/install/#&#34;&gt;https://docs.openvswitch.org/en/latest/intro/install/#&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载链接: &lt;a href=&#34;http://www.openvswitch.org/download/&#34;&gt;http://www.openvswitch.org/download/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载版本: 2.13.6, 解压后进入根目录&lt;/p&gt;
+&lt;p&gt;参考资料:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/goldsunshine/p/10331606.html&#34;&gt;https://www.cnblogs.com/goldsunshine/p/10331606.html&lt;/a&gt;
+&lt;a href=&#34;https://blog.csdn.net/zhangmeimei_pku/article/details/97929098&#34;&gt;https://blog.csdn.net/zhangmeimei_pku/article/details/97929098&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在这之前要先安装python和python-pip, 这么做会让系统自动安装c编译器
+&lt;code&gt;sudo apt install python&lt;/code&gt;
+&lt;code&gt;sudo apt install python-pip&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;OVS的源码安装命令如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./configure 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make install
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 安装内核&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make modules_install 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 将openvswitch载入到内核模块中&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/sbin/modprobe openvswitch 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 看内核模块是否被加载&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/sbin/lsmod &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;grep openvswitch
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 启动(这里要注意一下使用sudo找不到命令的问题,所以需要找到原来的目录运行一下)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;:/usr/local/share/openvswitch/scripts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ovs-ctl start 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;:/usr/local/share/openvswitch/scripts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ovs-ctl --no-ovs-vswitchd start
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;:/usr/local/share/openvswitch/scripts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ovs-ctl --no--ovsdb-server start
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 下面的是要配置ovsdb的数据库 (配置数据库了套接字都需要使用sudo,命令找不到就使用which, 然后使用绝对路径运行命令)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 原文:In addition to using the automated script to start Open vSwitch, you may wish to manually start the various daemons. Before starting ovs-vswitchd itself, you need to start its configuration database, ovsdb-server. Each machine on which Open vSwitch is installed should run its own copy of ovsdb-server. Before ovsdb-server itself can be started, configure a database that it can use:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 这里要注意, 需要在openvswitch要目录运行该命令&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -p /usr/local/etc/openvswitch
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ovsdb-tool create /usr/local/etc/openvswitch/conf.db &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    vswitchd/vswitch.ovsschema
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 配置ovsdb-server以使用上面创建的数据库，监听Unix域套接字&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 原文: Configure ovsdb-server to use database created above, to listen on a Unix domain socket, to connect to any managers specified in the database itself, and to use the SSL configuration in the database:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -p /usr/local/var/run/openvswitch
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ovsdb-server --remote&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;punix:/usr/local/var/run/openvswitch/db.sock &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --remote&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;db:Open_vSwitch,Open_vSwitch,manager_options &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --private-key&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;db:Open_vSwitch,SSL,private_key &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --certificate&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;db:Open_vSwitch,SSL,certificate &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --bootstrap-ca-cert&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;db:Open_vSwitch,SSL,ca_cert &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    --pidfile --detach --log-file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ovs-vsctl --no-wait init
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ovs-vswitchd --pidfile --detach --log-file
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;若对OVS的源码有修改，改完ovs之后，再次按照这个步骤重新安装一下自己的ovs&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

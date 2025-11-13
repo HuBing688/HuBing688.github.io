@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Emacs on ExampleSite</title>
+    <link>https://examplesite.com/tags/emacs/</link>
+    <description>Recent content in Emacs on ExampleSite</description>
+    <image>
+      <title>ExampleSite</title>
+      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Nov 2025 17:36:39 -0400</lastBuildDate>
+    <atom:link href="https://examplesite.com/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs 常用技巧总结</title>
+      <link>https://examplesite.com/posts/emacs_tip/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 -0400</pubDate>
+      <guid>https://examplesite.com/posts/emacs_tip/</guid>
+      <description>&lt;h2 id=&#34;bookmark&#34;&gt;bookmark&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;C-x r l : 列出书签&lt;/li&gt;
+&lt;li&gt;C-x r m : 保存书签&lt;/li&gt;
+&lt;li&gt;S-x bookmark-save : 可以在书签保存文件中修修改书签&lt;/li&gt;
+&lt;li&gt;S-M: mark set&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Shift-S &amp;gt;: 跳到最后&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;org&#34;&gt;org&lt;/h2&gt;
+&lt;p&gt;Shift-Tab: 循环标题折叠
+C-c C-e: 导出md文件到hugo&lt;/p&gt;
+&lt;h2 id=&#34;ox-hugo-安装&#34;&gt;ox-hugo 安装&lt;/h2&gt;
+&lt;p&gt;用于导致org文件为hugo适配的markdown格式&lt;/p&gt;
+&lt;p&gt;安装完 ox-hugo 后，快捷键 C-x C-e 无法绑定, 需要执行命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;M-x&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;org-hugo-export-wim-to-md&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;才可使用快捷銉&lt;/p&gt;
+&lt;p&gt;因此需要在配置文件中添加启动命令,如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;use-package&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ox-hugo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nb&#34;&gt;:after&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ox&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nb&#34;&gt;:ensure&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;yasnippet-config&#34;&gt;Yasnippet Config&lt;/h2&gt;
+&lt;h3 id=&#34;调出yasnippet配置&#34;&gt;调出yasnippet配置&lt;/h3&gt;
+&lt;p&gt;M-x yas-new-snippet&lt;/p&gt;
+&lt;h3 id=&#34;写配置文件&#34;&gt;写配置文件&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# -*- mode: snippet -*-
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# name: hugo_blog
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# key: &amp;gt;hugo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# --
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Adding your snippet here!
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;name: 你给你的snippet起的名字&lt;/li&gt;
+&lt;li&gt;key: 要调出snippet时所需要的快捷键&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;在-dot-emacs-dot-d-custom-dot-el中添加配置&#34;&gt;在.emacs.d/custom.el中添加配置&lt;/h3&gt;
+&lt;p&gt;下面的配置中绑定了扩展快捷键 C-c y&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

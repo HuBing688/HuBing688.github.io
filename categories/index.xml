@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on ExampleSite</title>
+    <link>https://examplesite.com/categories/</link>
+    <description>Recent content in Categories on ExampleSite</description>
+    <image>
+      <title>ExampleSite</title>
+      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Nov 2025 17:36:39 -0400</lastBuildDate>
+    <atom:link href="https://examplesite.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>额外学习</title>
+      <link>https://examplesite.com/categories/%E9%A2%9D%E5%A4%96%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 -0400</pubDate>
+      <guid>https://examplesite.com/categories/%E9%A2%9D%E5%A4%96%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>科研学习</title>
+      <link>https://examplesite.com/categories/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Sat, 22 Jul 2023 21:13:00 +0800</pubDate>
+      <guid>https://examplesite.com/categories/%E7%A7%91%E7%A0%94%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>实验</title>
+      <link>https://examplesite.com/categories/%E5%AE%9E%E9%AA%8C/</link>
+      <pubDate>Mon, 03 Apr 2023 13:25:00 +0800</pubDate>
+      <guid>https://examplesite.com/categories/%E5%AE%9E%E9%AA%8C/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DIY</title>
+      <link>https://examplesite.com/categories/diy/</link>
+      <pubDate>Thu, 23 Feb 2023 18:29:00 +0800</pubDate>
+      <guid>https://examplesite.com/categories/diy/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
