@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ovs on ExampleSite</title>
-    <link>https://examplesite.com/tags/ovs/</link>
+    <link>https://hubing688.github.io/tags/ovs/</link>
     <description>Recent content in Ovs on ExampleSite</description>
     <image>
       <title>ExampleSite</title>
-      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://hubing688.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://hubing688.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Wed, 28 Sep 2022 16:47:43 +0800</lastBuildDate>
-    <atom:link href="https://examplesite.com/tags/ovs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hubing688.github.io/tags/ovs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OVS添加自定义action</title>
-      <link>https://examplesite.com/posts/org_11_ovs_add_action/</link>
+      <link>https://hubing688.github.io/posts/org_11_ovs_add_action/</link>
       <pubDate>Mon, 19 Sep 2022 21:27:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_11_ovs_add_action/</guid>
+      <guid>https://hubing688.github.io/posts/org_11_ovs_add_action/</guid>
       <description>&lt;h2 id=&#34;版本及环境&#34;&gt;版本及环境&lt;/h2&gt;
 &lt;p&gt;ovs 2.13.7&lt;/p&gt;
 &lt;p&gt;ubuntu 18.04&lt;/p&gt;
@@ -39,14 +39,14 @@
 &lt;p&gt;match用于匹配到达的数据包，action是对匹配到的数据包执行相应的动作&lt;/p&gt;
 &lt;p&gt;下面这个图是流表的例子&lt;/p&gt;
 &lt;figure&gt;
-        &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/pbzXOr.png&#34;/&gt; 
+        &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/pbzXOr.png&#34;/&gt; 
     &lt;/figure&gt;
 
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;下图为已有的一些action&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/c5B1k9.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/c5B1k9.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;ul&gt;
@@ -72,7 +72,7 @@
 &lt;li&gt;
 &lt;p&gt;将action翻译到datapath&lt;/p&gt;
 &lt;figure&gt;
-        &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/g6VGEj.png&#34;/&gt; 
+        &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/g6VGEj.png&#34;/&gt; 
     &lt;/figure&gt;
 
 &lt;/li&gt;
@@ -80,7 +80,7 @@
 &lt;h2 id=&#34;流表的添加过程概述&#34;&gt;流表的添加过程概述&lt;/h2&gt;
 &lt;p&gt;对于下面这个流表&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/iLTIl2.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/iLTIl2.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;它的添加过程为：&lt;/p&gt;
@@ -115,9 +115,9 @@
     </item>
     <item>
       <title>mininet , ovs , ryu 分别进行源码安装</title>
-      <link>https://examplesite.com/posts/05_ovs_install/</link>
+      <link>https://hubing688.github.io/posts/05_ovs_install/</link>
       <pubDate>Sun, 28 Aug 2022 22:01:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/05_ovs_install/</guid>
+      <guid>https://hubing688.github.io/posts/05_ovs_install/</guid>
       <description>&lt;h2 id=&#34;ovs安装&#34;&gt;OVS安装&lt;/h2&gt;
 &lt;h3 id=&#34;ovs与linux内核版本对应&#34;&gt;ovs与linux内核版本对应&lt;/h3&gt;
 &lt;p&gt;OVS版本是需要与linux内核版本对应的，否则会导致内核函数与OVS调用的函数不匹配，简称装不上。

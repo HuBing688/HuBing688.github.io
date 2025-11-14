@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ovs-Dpdk on ExampleSite</title>
-    <link>https://examplesite.com/tags/ovs-dpdk/</link>
+    <link>https://hubing688.github.io/tags/ovs-dpdk/</link>
     <description>Recent content in Ovs-Dpdk on ExampleSite</description>
     <image>
       <title>ExampleSite</title>
-      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://hubing688.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://hubing688.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Mon, 24 Apr 2023 14:25:35 +0800</lastBuildDate>
-    <atom:link href="https://examplesite.com/tags/ovs-dpdk/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hubing688.github.io/tags/ovs-dpdk/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ovs-dpdk系列配置实验-—1. 安装</title>
-      <link>https://examplesite.com/posts/org_22_ovs_dpdk_install/</link>
+      <link>https://hubing688.github.io/posts/org_22_ovs_dpdk_install/</link>
       <pubDate>Mon, 03 Apr 2023 13:25:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_22_ovs_dpdk_install/</guid>
+      <guid>https://hubing688.github.io/posts/org_22_ovs_dpdk_install/</guid>
       <description>&lt;h2 id=&#34;构建要求&#34;&gt;构建要求&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;dpdk 22.11.1&lt;/li&gt;
@@ -56,7 +56,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装完后看一下版本,若能输出版本号,说明DPDK安装成功&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pkg-config --modversion libdpdk
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/pCst0o.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/pCst0o.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;ovs安装&#34;&gt;OVS安装&lt;/h2&gt;

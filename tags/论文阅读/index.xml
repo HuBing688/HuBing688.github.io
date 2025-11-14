@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>论文阅读 on ExampleSite</title>
-    <link>https://examplesite.com/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+    <link>https://hubing688.github.io/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
     <description>Recent content in 论文阅读 on ExampleSite</description>
     <image>
       <title>ExampleSite</title>
-      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://hubing688.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://hubing688.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Sat, 22 Jul 2023 23:04:45 +0800</lastBuildDate>
-    <atom:link href="https://examplesite.com/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hubing688.github.io/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Practical Techniques for Searches on Encrypted Data</title>
-      <link>https://examplesite.com/posts/org_26_se/</link>
+      <link>https://hubing688.github.io/posts/org_26_se/</link>
       <pubDate>Sat, 22 Jul 2023 21:13:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_26_se/</guid>
+      <guid>https://hubing688.github.io/posts/org_26_se/</guid>
       <description>&lt;h2 id=&#34;论文信息&#34;&gt;论文信息&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;发表: IEEE Symposium on Security and Privacy (CCF A, 2000)&lt;/li&gt;
@@ -30,16 +30,16 @@
 &lt;p&gt;假设想要加密的文档有\(W_1, W_2, &amp;hellip;, W_l\)个单词.&lt;/p&gt;
 &lt;p&gt;加密: Alice 要想加密, 就先使用伪随机数生成器G生成一个随机数序列\(S_1, &amp;hellip;, S_l\). 每个\(S_i\) 有 n-m bit 的长度. 要对每i个位置的单词\(W_i\) 加密, Alice首先生成一个\(T_i = &amp;lt;S_i, F_{k_i}(S_i)&amp;gt;\)(\(&amp;lt;\cdot, \cdot&amp;gt;\)表示比特连接), 并获得该单词的加密结果: \(C_i := W_i \oplus T_i\). 因为只有Alice 能生成 \(T_1, &amp;hellip;, T_l\), 所以这个方法是相对安全的.&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/cHKioy.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/cHKioy.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;查找: 想要搜索单词W, Alice需要将W, 以个W可能出现位置对应的\(k_i\)发送给Bob. Bob通过检查\(C_i \oplus W_i\) 是否等于一些\(&amp;lt;s, F_{k_i}(s)&amp;gt;\)来进行对加密文档的搜索.&lt;/p&gt;</description>
     </item>
     <item>
       <title>On a Multi-criteria Clustering Approachfor Attack Attribution</title>
-      <link>https://examplesite.com/posts/org_21_multi_clustering/</link>
+      <link>https://hubing688.github.io/posts/org_21_multi_clustering/</link>
       <pubDate>Wed, 22 Feb 2023 14:27:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_21_multi_clustering/</guid>
+      <guid>https://hubing688.github.io/posts/org_21_multi_clustering/</guid>
       <description>&lt;h2 id=&#34;论文信息&#34;&gt;论文信息&lt;/h2&gt;
 &lt;p&gt;SigKDD, 2010&lt;/p&gt;
 &lt;p&gt;阅读目的: 了解攻击溯源相关知识, 主要是为了扩充知识面.&lt;/p&gt;
@@ -56,7 +56,7 @@
 &lt;h3 id=&#34;基于图的聚类&#34;&gt;基于图的聚类&lt;/h3&gt;
 &lt;p&gt;每个特征假设为p维的向量, 一个有n个样本, 这样对所有的样本,每个特征都可以生成一个矩阵。有n个特征，即有n个这种矩阵, 即如下:&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/SgpKO2.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/SgpKO2.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;对于某个特征有N个样本, 这些样本的特征值作为一个节点, 不同节点之间的距离作为边从而构建无向带权图. 即对于第k个特征的节点集为: \(V_k = \{x_1^k, X_2^k, &amp;hellip;, X_N^k\}\). 这个特征所生成的图记为\(G_k\).&lt;/p&gt;
@@ -66,18 +66,18 @@
 &lt;h2 id=&#34;在一个蜜罐数据集上的应用&#34;&gt;在一个蜜罐数据集上的应用&lt;/h2&gt;
 &lt;p&gt;通过上面的方法选择特征,构造图,然后聚类最后获得一个一个簇, 如下图:&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/iV0wkO.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/iV0wkO.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;然后就是作者对这个图的分析了, 因为特征是自己选择的, 所以每个簇是哪个特征的聚焦也是事先知道的.&lt;/p&gt;</description>
     </item>
     <item>
       <title>StackPi: New packet marking and filtering mechanisms for DDoS and IP spoofing defense</title>
-      <link>https://examplesite.com/posts/org_18_stackpi/</link>
+      <link>https://hubing688.github.io/posts/org_18_stackpi/</link>
       <pubDate>Tue, 06 Dec 2022 13:14:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_18_stackpi/</guid>
+      <guid>https://hubing688.github.io/posts/org_18_stackpi/</guid>
       <description>&lt;h2 id=&#34;论文信息&#34;&gt;论文信息&lt;/h2&gt;
-&lt;p&gt;发在JSAC上, 作者: &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/E0EPl1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;发在JSAC上, 作者: &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/E0EPl1.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;把与我相关的部分做总结&lt;/p&gt;
 &lt;h2 id=&#34;摘要&#34;&gt;摘要&lt;/h2&gt;
 &lt;p&gt;本文提出StackPi, 一种新的数据包标记方案以及一种过滤机制。标记方案由两部分组成：基于栈的标记以及write-ahead标记。过虑机制中我们推导出一个用Pi标记进行过滤的最佳阈值策略。还提出PiIP过度器可用于检测网络协议欺骗攻击。&lt;/p&gt;
@@ -101,14 +101,14 @@
 &lt;p&gt;当相邻两个路由器一个是Pi-enabled，另一个是legacy路由器时，write-ahead标记可以在计算标记时带上legacy路由器。&lt;/p&gt;
 &lt;p&gt;不好的地方：当两个Pi-enabled路由器相邻，第一个路由器在计算标记时已带下了下一个交换机，因此下一个路由器的标记并不需要。因此：在收到数据包时，路由器将最近的标记与自己的标记相比较，若相同，则默认上一跳将本跳的标记已加进去了，因此跳过本路由器的push操作并只push下一跳的标记到栈中。图2为例子。&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/BoLH1y.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/BoLH1y.png&#34;/&gt; 
 &lt;/figure&gt;</description>
     </item>
     <item>
       <title>Efficient Forwarding Anomaly Detection in Software-Defined Networks</title>
-      <link>https://examplesite.com/posts/org_17_ifade/</link>
+      <link>https://hubing688.github.io/posts/org_17_ifade/</link>
       <pubDate>Thu, 01 Dec 2022 22:12:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_17_ifade/</guid>
+      <guid>https://hubing688.github.io/posts/org_17_ifade/</guid>
       <description>&lt;p&gt;affliation and publication&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;author: Qi Li, Yunpeng Liu, Zhuotao Liu, Peng Zhang, Chunhui Pang&lt;/li&gt;
@@ -122,10 +122,10 @@
 &lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;
 &lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;
 &lt;p&gt;SDN本身的不足,问题的重要性,问题的广泛性
-&lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/DoswBk.png&#34;&gt;&lt;/p&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/DoswBk.png&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;an-inductory-example&#34;&gt;An Inductory Example&lt;/h4&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/SBHnRo.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/SBHnRo.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;ul&gt;
@@ -139,7 +139,7 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;fade设计&#34;&gt;FADE设计&lt;/h2&gt;
 &lt;h3 id=&#34;design-overview&#34;&gt;Design Overview&lt;/h3&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/7cPhv3.png&#34;&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/7cPhv3.png&#34;&gt;
 由四个组件组成&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Flow selection model:
@@ -154,20 +154,20 @@
 &lt;li&gt;利用算法1选择时最小流集:对每个egress rule, 反向深度找rule path的每个rule,直到ingress gule,如此找到所有的rule path.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/xsQq4V.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/xsQq4V.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;h3 id=&#34;probe-selection&#34;&gt;Probe Selection&lt;/h3&gt;
 &lt;p&gt;对于给定的流,对它经过的rule path中选择一些rule,这些rule称为probe.
 rule path的第一个rule和最后一个rule一定要选择; 对于其他的rule选择,则通过一个概率计算的方式来选择.
 过程略,因第链路通常长度不会超过32,最终最优选择结果如表2:
-&lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/dmRFje.png&#34;&gt;&lt;/p&gt;</description>
+&lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/dmRFje.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>High-Speed Inter-domain Fault Localization</title>
-      <link>https://examplesite.com/posts/org_16_fault_localization/</link>
+      <link>https://hubing688.github.io/posts/org_16_fault_localization/</link>
       <pubDate>Mon, 28 Nov 2022 21:24:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_16_fault_localization/</guid>
+      <guid>https://hubing688.github.io/posts/org_16_fault_localization/</guid>
       <description>&lt;p&gt;&amp;gt; C. Basescu, Y. -H. Lin, H. Zhang and A. Perrig, &amp;ldquo;High-Speed Inter-Domain Fault Localization,&amp;rdquo; 2016 IEEE Symposium on Security and Privacy (SP), 2016, pp. 859-877, doi: 10.1109/SP.2016.56.&lt;/p&gt;
 &lt;p&gt;文章发在SP上, 但读的时候很不好受, 很难受, 因为里面的英语表达写法很不习惯, 而且读的时候还总给人一种水时长的感觉, 挑与我相关的重点读了一下, 感觉还不错.&lt;/p&gt;
 &lt;h2 id=&#34;工作背景&#34;&gt;工作背景&lt;/h2&gt;
@@ -176,7 +176,7 @@ rule path的第一个rule和最后一个rule一定要选择; 对于其他的rule
 &lt;p&gt;Faultpints使用 确定性采样来抓捕恶意AS.每个AS都要和源建立一个秘密数据包抽样密钥\(D_{AS_i, S}\), 且规定相应的确认包种类,如DACK. 如图1中所示, 源与目的通信, AS3是恶意的. 当AS抽样包时会存储一个数据包的fingerprint到 Bloom filter中, 这个fingerprint会捕获包的presence 和包的内容. 当包被丢弃那么D则不会发确认包,所以S会为这个数据包发探针, 所有的AS都会响应这个探针, 而源会从探针数据包中获得抽样包的信息.
 源会检查响应包的密钥并对某些AS进行怀疑, 并为每个AS进行怀疑打分, 错误行为的AS的怀疑打分最终会高于其他AS.&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/IbGs7H.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/IbGs7H.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;其他章节&#34;&gt;&lt;!-- raw HTML omitted --&gt;TODO&lt;!-- raw HTML omitted --&gt; 其他章节&lt;/h2&gt;
@@ -184,9 +184,9 @@ rule path的第一个rule和最后一个rule一定要选择; 对于其他的rule
     </item>
     <item>
       <title>PROOFS OF WORK AND BREAD PUDDING PROTOCOLS (EXTENDED ABSTRACT)</title>
-      <link>https://examplesite.com/posts/org_15_pow/</link>
+      <link>https://hubing688.github.io/posts/org_15_pow/</link>
       <pubDate>Sat, 26 Nov 2022 21:10:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_15_pow/</guid>
+      <guid>https://hubing688.github.io/posts/org_15_pow/</guid>
       <description>&lt;h2 id=&#34;简单介绍&#34;&gt;简单介绍&lt;/h2&gt;
 &lt;p&gt;这一篇是讲PoW基础的论文,没有具体说明PoW是什么,但给出了与PoW相关的一些定义和例子, 用于理解PoW还可. 整篇文章看完还是云里雾里的, 但大概理解了PoW其实相当于一个证明, 对于给定的一个hash函数, V知道这个函数的计算结果, 而P要做的是向V证明它知道这个计算结果所对应的原象. 因为hash算逆几乎不可能, 因此若原象是n位, P随便猜的几率为1/2^n.&lt;/p&gt;
 &lt;h2 id=&#34;定义&#34;&gt;定义:&lt;/h2&gt;
@@ -209,9 +209,9 @@ rule path的第一个rule和最后一个rule一定要选择; 对于其他的rule
     </item>
     <item>
       <title>EPIC: Every packet is checked in the data plane of a path-aware internet</title>
-      <link>https://examplesite.com/posts/org_14_epic/</link>
+      <link>https://hubing688.github.io/posts/org_14_epic/</link>
       <pubDate>Sat, 26 Nov 2022 19:43:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_14_epic/</guid>
+      <guid>https://hubing688.github.io/posts/org_14_epic/</guid>
       <description>&lt;h2 id=&#34;简单介绍&#34;&gt;简单介绍&lt;/h2&gt;
 &lt;p&gt;这是一篇最近NSDI上路径验证相关的论文.看了好几遍但还是没进脑子,因此在此总结一遍.&lt;/p&gt;
 &lt;h3 id=&#34;路径构建&#34;&gt;路径构建&lt;/h3&gt;
@@ -226,9 +226,9 @@ VALHD中为验证数据包所需要的一些域, \(ts_{pkt}\)为时间戳, \(S_i
     </item>
     <item>
       <title>Current Trends of Discovery Topology in SDN</title>
-      <link>https://examplesite.com/posts/org_10_topo_discover/</link>
+      <link>https://hubing688.github.io/posts/org_10_topo_discover/</link>
       <pubDate>Fri, 16 Sep 2022 23:43:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_10_topo_discover/</guid>
+      <guid>https://hubing688.github.io/posts/org_10_topo_discover/</guid>
       <description>&lt;p&gt;&lt;strong&gt;affliation and publication&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;author:&lt;/li&gt;
@@ -247,7 +247,7 @@ VALHD中为验证数据包所需要的一些域, \(ts_{pkt}\)为时间戳, \(S_i
 &lt;p&gt;支持OF的交换机有两个特性: 1. 设置了连接控制器的端口；2. 有流表将包通过packetIn发到控制器.
 控制器向每个交换机发个packetOut,并把LLDP包放里面, LLDP包的目的MAC为广播地址.交换机收到LLDP包后将其转发给所有的邻居交换机.邻居交换机收到LLDP发现不地从控制器来在,就将该LLDP包通过PacketIn发给控制器,这时LLDP包的元数据中已有了一些交换机制基本信息,如交换机ID, 交换机端口号.
 信息交换过程见图5,
-&lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/JNAiOM.png&#34;&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/JNAiOM.png&#34;&gt;
 代价:生成packetIn包数为2倍链路数,在\[6\]中有改进,缺点:只能发现相邻交换机.&lt;/p&gt;
 &lt;h3 id=&#34;network-with-traditional-and-openflow-switches&#34;&gt;Network with Traditional and Openflow Switches&lt;/h3&gt;
 &lt;p&gt;控制器要发现所有OF交换机之间的连接, 直接的或间接的(两个OF交换机中间隔了传统交换机).
@@ -257,7 +257,7 @@ VALHD中为验证数据包所需要的一些域, \(ts_{pkt}\)为时间戳, \(S_i
 &lt;li&gt;EtherType为0x8999.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;使用方法:控制器通过向OF交换机的每个输出端口发送BDDP包并下发匹配流表,OF 交换机收到则匹配EtherType 0x8999并返回给控制器, 此时BDDP包中与LLDP包相同有着交换机的一些信息. 传统交换机则会广播最终播给OF交换机.图6为信息交换过程.
-&lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/ZHLga9.png&#34;&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/ZHLga9.png&#34;&gt;
 缺点:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;当前无标准.&lt;/li&gt;
@@ -266,9 +266,9 @@ VALHD中为验证数据包所需要的一些域, \(ts_{pkt}\)为时间戳, \(S_i
     </item>
     <item>
       <title>Dynamic Packet Forwarding Verification in SDN</title>
-      <link>https://examplesite.com/posts/org_09_dyna/</link>
+      <link>https://hubing688.github.io/posts/org_09_dyna/</link>
       <pubDate>Fri, 16 Sep 2022 22:27:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_09_dyna/</guid>
+      <guid>https://hubing688.github.io/posts/org_09_dyna/</guid>
       <description>&lt;p&gt;&lt;strong&gt;affliation and publication&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -329,15 +329,15 @@ VALHD中为验证数据包所需要的一些域, \(ts_{pkt}\)为时间戳, \(S_i
     </item>
     <item>
       <title>Solving Minimum Path Cover on a DAG</title>
-      <link>https://examplesite.com/posts/org_06_mpc/</link>
+      <link>https://hubing688.github.io/posts/org_06_mpc/</link>
       <pubDate>Sun, 21 Aug 2022 22:01:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_06_mpc/</guid>
+      <guid>https://hubing688.github.io/posts/org_06_mpc/</guid>
       <description>&lt;h2 id=&#34;文章目的&#34;&gt;文章目的&lt;/h2&gt;
 &lt;p&gt;介绍一个用于在有向无环图（DAG）中进行最小路径覆盖（Minimum Path Cover, MPC）的算法。文中给定了一个场景（交通网络中的运输问题），并将这个场景建模成MPC问题，最后给出了求解方法。&lt;/p&gt;
 &lt;h2 id=&#34;情景样例&#34;&gt;情景样例&lt;/h2&gt;
 &lt;p&gt;假设一个交通运输系统中有4个地铁站，站与站之间可达，交通时间表可确定。你需要做的是购买车票从而实现所有的运输。时间表如下：&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/IdiIqU.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/IdiIqU.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;最坏的情况是每辆车都买一个票，需要7张。但其实有的运输任务可被同一个车完成，如T1和T2。我们需要做的是最大化运输效率，即最小化所构买的车票数，此时，找到了一个目标函数。&lt;/p&gt;
@@ -345,7 +345,7 @@ VALHD中为验证数据包所需要的一些域, \(ts_{pkt}\)为时间戳, \(S_i
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;最大化车所到达的站数的同时，保证所有的站点均到达。&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;p&gt;首先根据传输时间表构造交通图，因为车辆到达时间是不同的且有先后的，所以车辆换乘是有时间依赖的，据此构造图如下:&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/bbpTDk.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/bbpTDk.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;因此，现在问题转变为:&lt;/p&gt;
@@ -354,20 +354,20 @@ VALHD中为验证数据包所需要的一些域, \(ts_{pkt}\)为时间戳, \(S_i
 &lt;p&gt;在通用的图上找MPC是一个NP-hard问题，但在DAG中找MPC可转换为找二部图的最大匹配问题，这可以在多项式时间内完成。&lt;/p&gt;
 &lt;p&gt;为解决以上问题，首先构造一个辅助图，在辅助图中，将原始图中的每个节点分为两个，一个节点保留原始节点的出度，另一个节点保留原始图的入度。举个例子，将节点$t$划分为\(t_1, t_2\). 对于t的邻居，从$t_1$画边连出去，对于将$t$作为邻居的其他节点，将该节点画边连到\(t_2\)。如此构造的图其实是一个二部图，结果如下:&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/N1svY0.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/N1svY0.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;在以上二部图中查找匹配，假如找完最大匹配后某一个节点未到达，则需要单独为该节点购买一个车次的票以完成运输。因此最小化未到达节点的问题即是上图中的查找最大匹配的问题。而二部图的最大匹配问题是可以在多项式时间内完成的。&lt;/p&gt;
 &lt;p&gt;其中的一个匹配结果为：&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/t5dFNp.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/t5dFNp.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;二部图最大匹配&#34;&gt;二部图最大匹配&lt;/h2&gt;
 &lt;p&gt;对于二部图的匹配问题其是就是用匈牙利算法来解决的。这里简单介绍一下。参考自&lt;a href=&#34;https://zhuanlan.zhihu.com/p/96229700&#34;&gt;这里&lt;/a&gt;，这个作者还有其他算法的讲解以及代码实现。&lt;/p&gt;
 &lt;p&gt;对于现有的二部图&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/1srNJY.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/1srNJY.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;要找到它的最大匹配，是需要遍历它所有的节点的:&lt;/p&gt;
@@ -378,7 +378,7 @@ VALHD中为验证数据包所需要的一些域, \(ts_{pkt}\)为时间戳, \(S_i
 &lt;li&gt;
 &lt;p&gt;对于B2，它只与G2相连，这时再返回去看与G2相连的B1是否有别的相连的，可见G4可选，因此就将G2与B2相连，B1与G4相连；&lt;/p&gt;
 &lt;figure&gt;
-        &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/JPY19u.png&#34;/&gt; 
+        &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/JPY19u.png&#34;/&gt; 
     &lt;/figure&gt;
 
 &lt;/li&gt;
@@ -387,7 +387,7 @@ VALHD中为验证数据包所需要的一些域, \(ts_{pkt}\)为时间戳, \(S_i
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/qbBuAF.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/qbBuAF.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;ul&gt;
@@ -397,9 +397,9 @@ VALHD中为验证数据包所需要的一些域, \(ts_{pkt}\)为时间戳, \(S_i
     </item>
     <item>
       <title>Amplification Hell: Revisiting Network Protocols for DDoS Abuse.</title>
-      <link>https://examplesite.com/posts/31_amplification_hell/</link>
+      <link>https://hubing688.github.io/posts/31_amplification_hell/</link>
       <pubDate>Sat, 14 Sep 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/31_amplification_hell/</guid>
+      <guid>https://hubing688.github.io/posts/31_amplification_hell/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Rossow C. Amplification Hell: Revisiting Network Protocols for DDoS Abuse[C]//NDSS. 2014.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -433,9 +433,9 @@ $P A F=\frac{\text {number of packets amplifier to victim}}{\text {number of pac
     </item>
     <item>
       <title>LADS: large-scale automated DDOS detection system</title>
-      <link>https://examplesite.com/posts/30_lads/</link>
+      <link>https://hubing688.github.io/posts/30_lads/</link>
       <pubDate>Fri, 13 Sep 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/30_lads/</guid>
+      <guid>https://hubing688.github.io/posts/30_lads/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Sekar V, Duffield N G, Spatscheck O, et al. LADS: Large-scale Automated DDoS Detection System[C]//USENIX Annual Technical Conference, General Track. 2006: 171-184.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -487,9 +487,9 @@ $P A F=\frac{\text {number of packets amplifier to victim}}{\text {number of pac
     </item>
     <item>
       <title>A taxonomy of DDoS attack and DDoS defense mechanisms</title>
-      <link>https://examplesite.com/posts/29_taxonomy/</link>
+      <link>https://hubing688.github.io/posts/29_taxonomy/</link>
       <pubDate>Thu, 12 Sep 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/29_taxonomy/</guid>
+      <guid>https://hubing688.github.io/posts/29_taxonomy/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Mirkovic J, Reiher P. A taxonomy of DDoS attack and DDoS defense mechanisms[J]. ACM SIGCOMM Computer Communication Review, 2004, 34(2): 39-53.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -540,9 +540,9 @@ $P A F=\frac{\text {number of packets amplifier to victim}}{\text {number of pac
     </item>
     <item>
       <title>DDoS Attack Protection in the Era of Cloud Computing and Software-Defined Networking</title>
-      <link>https://examplesite.com/posts/28_ddos_cloud_computing/</link>
+      <link>https://hubing688.github.io/posts/28_ddos_cloud_computing/</link>
       <pubDate>Wed, 11 Sep 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/28_ddos_cloud_computing/</guid>
+      <guid>https://hubing688.github.io/posts/28_ddos_cloud_computing/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;B. Wang, Y. Zheng, W. Lou and Y. T. Hou, &amp;ldquo;DDoS Attack Protection in the Era of Cloud Computing and Software-Defined Networking,&amp;rdquo; 2014 IEEE 22nd International Conference on Network Protocols, Raleigh, NC, 2014, pp. 624-629.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -577,9 +577,9 @@ DaMask的工作流如图2所示：&lt;/li&gt;
     </item>
     <item>
       <title>Bohatei: Flexible and elastic ddos defense</title>
-      <link>https://examplesite.com/posts/27_bohatei/</link>
+      <link>https://hubing688.github.io/posts/27_bohatei/</link>
       <pubDate>Tue, 10 Sep 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/27_bohatei/</guid>
+      <guid>https://hubing688.github.io/posts/27_bohatei/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Fayaz S K, Tobioka Y, Sekar V, et al. Bohatei: Flexible and elastic ddos defense[C]//24th {USENIX} Security Symposium ({USENIX} Security 15). 2015: 817-832.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -621,9 +621,9 @@ DaMask的工作流如图2所示：&lt;/li&gt;
     </item>
     <item>
       <title>SD-Anti-DDoS: Fast and efficient DDoS defense in software-defined networks</title>
-      <link>https://examplesite.com/posts/26_sd-anti-ddos/</link>
+      <link>https://hubing688.github.io/posts/26_sd-anti-ddos/</link>
       <pubDate>Mon, 09 Sep 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/26_sd-anti-ddos/</guid>
+      <guid>https://hubing688.github.io/posts/26_sd-anti-ddos/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Cui Y, Yan L, Li S, et al. SD-Anti-DDoS: Fast and efficient DDoS defense in software-defined networks[J]. Journal of Network and Computer Applications, 2016, 68: 65-79.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -659,9 +659,9 @@ Mitigation state:根据找到的source switch进行缓解。&lt;/p&gt;
     </item>
     <item>
       <title>FRESCO:Modular Composable Security Services for Software-Defined Networks</title>
-      <link>https://examplesite.com/posts/25_fresco/</link>
+      <link>https://hubing688.github.io/posts/25_fresco/</link>
       <pubDate>Sun, 08 Sep 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/25_fresco/</guid>
+      <guid>https://hubing688.github.io/posts/25_fresco/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Shin S W, Porras P, Yegneswara V, et al. Fresco: Modular composable security services for software-defined networks[C]//20th Annual Network &amp;amp; Distributed System Security Symposium. NDSS, 2013.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -715,9 +715,9 @@ input:第一个M的输出，action:drop或forward。&lt;/p&gt;
     </item>
     <item>
       <title>dFence: Transparent Network-based Denial of Service Mitigation</title>
-      <link>https://examplesite.com/posts/24_dfence/</link>
+      <link>https://hubing688.github.io/posts/24_dfence/</link>
       <pubDate>Sat, 07 Sep 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/24_dfence/</guid>
+      <guid>https://hubing688.github.io/posts/24_dfence/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Mahimkar A , Dange J , Shmatikov V , et al. dFence: Transparent Network-based Denial of Service Mitigation[J]. Nsdi ’, 2007:24-24.，&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -743,9 +743,9 @@ $h_{1}\left(\operatorname{src} a d d r, \operatorname{src}&lt;em&gt;{-} p o r t\
     </item>
     <item>
       <title>Header Space Analysis: Static Checking For Networks</title>
-      <link>https://examplesite.com/posts/23_header-space-analysis/</link>
+      <link>https://hubing688.github.io/posts/23_header-space-analysis/</link>
       <pubDate>Fri, 06 Sep 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/23_header-space-analysis/</guid>
+      <guid>https://hubing688.github.io/posts/23_header-space-analysis/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Kazemian P, Varghese G, McKeown N. Header space analysis: Static checking for networks[C]//Presented as part of the 9th {USENIX} Symposium on Networked Systems Design and Implementation ({NSDI} 12). 2012: 113-126.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -765,9 +765,9 @@ $\Psi(h, p)=\left{\begin{array}{ll}{T_{1}(h, p)} &amp;amp; {\text { if } p \in \
     </item>
     <item>
       <title>Header Space Analysis: Static Checking For Networks</title>
-      <link>https://examplesite.com/posts/23_header_space_analysis/</link>
+      <link>https://hubing688.github.io/posts/23_header_space_analysis/</link>
       <pubDate>Fri, 06 Sep 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/23_header_space_analysis/</guid>
+      <guid>https://hubing688.github.io/posts/23_header_space_analysis/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Kazemian P, Varghese G, McKeown N. Header space analysis: Static checking for networks[C]//Presented as part of the 9th {USENIX} Symposium on Networked Systems Design and Implementation ({NSDI} 12). 2012: 113-126.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -787,9 +787,9 @@ $\Psi(h, p)=\left{\begin{array}{ll}{T_{1}(h, p)} &amp;amp; {\text { if } p \in \
     </item>
     <item>
       <title>An Overview of Misuse/Attack Cases in SDN</title>
-      <link>https://examplesite.com/posts/22_misuse_attack/</link>
+      <link>https://hubing688.github.io/posts/22_misuse_attack/</link>
       <pubDate>Wed, 04 Sep 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/22_misuse_attack/</guid>
+      <guid>https://hubing688.github.io/posts/22_misuse_attack/</guid>
       <description>&lt;blockquote&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&#34;an-overview-of-misuseattack-cases-in-sdn&#34;&gt;An Overview of Misuse/Attack Cases in SDN&lt;/h1&gt;
@@ -825,9 +825,9 @@ $\Psi(h, p)=\left{\begin{array}{ll}{T_{1}(h, p)} &amp;amp; {\text { if } p \in \
     </item>
     <item>
       <title>Athena: A Framework for Scalable Anomaly Detection in Software-Defined Networks </title>
-      <link>https://examplesite.com/posts/21_athena/</link>
+      <link>https://hubing688.github.io/posts/21_athena/</link>
       <pubDate>Tue, 03 Sep 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/21_athena/</guid>
+      <guid>https://hubing688.github.io/posts/21_athena/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;S. Lee, J. Kim, S. Shin, P. Porras and V. Yegneswaran, &amp;ldquo;Athena: A Framework for Scalable Anomaly Detection in Software-Defined Networks,&amp;rdquo; 2017 47th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), Denver, CO, 2017, pp. 249-260.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -854,9 +854,9 @@ $\Psi(h, p)=\left{\begin{array}{ll}{T_{1}(h, p)} &amp;amp; {\text { if } p \in \
     </item>
     <item>
       <title>Tool support for the evaluation of anomaly traffic classification for network resilience</title>
-      <link>https://examplesite.com/posts/20_ad_classification/</link>
+      <link>https://hubing688.github.io/posts/20_ad_classification/</link>
       <pubDate>Mon, 02 Sep 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/20_ad_classification/</guid>
+      <guid>https://hubing688.github.io/posts/20_ad_classification/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Silva A S D, Wickboldt J A, Schaefferfilho A, et al. Tool support for the evaluation of anomaly traffic classification for network resilience[C]// Computers &amp;amp; Communication. 2015.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -869,9 +869,9 @@ Silva A S D, Wickboldt J A, Schaefferfilho A, et al. Tool support for the evalua
     </item>
     <item>
       <title>SPHINX: Detecting Security Attacks in Software-Defined Networks</title>
-      <link>https://examplesite.com/posts/19_sphinx/</link>
+      <link>https://hubing688.github.io/posts/19_sphinx/</link>
       <pubDate>Sun, 01 Sep 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/19_sphinx/</guid>
+      <guid>https://hubing688.github.io/posts/19_sphinx/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Dhawan M, Poddar R, Mahajan K, et al. SPHINX: Detecting Security Attacks in Software-Defined Networks[C]//NDSS. 2015, 15: 8-11.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -924,9 +924,9 @@ DDoS攻击，TCAM是存放流表的内存，DDoS攻击可以使流表溢出&lt;/
     </item>
     <item>
       <title>AVANT-GUARD: scalable and vigilant switch flow management in software-defined networks</title>
-      <link>https://examplesite.com/posts/18_avant-guard/</link>
+      <link>https://hubing688.github.io/posts/18_avant-guard/</link>
       <pubDate>Sat, 31 Aug 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/18_avant-guard/</guid>
+      <guid>https://hubing688.github.io/posts/18_avant-guard/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Shin S , Yegneswaran V , Porras P , et al. AVANT-GUARD: scalable and vigilant switch flow management in software-defined networks[C]// Acm Sigsac Conference on Computer &amp;amp; Communications Security. ACM, 2013.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -960,9 +960,9 @@ DDoS攻击，TCAM是存放流表的内存，DDoS攻击可以使流表溢出&lt;/
     </item>
     <item>
       <title>SDN-RDCD: A Real-Time and Reliable Method for Detecting Compromised SDN Devices</title>
-      <link>https://examplesite.com/posts/17_sdn-rdcd_ton/</link>
+      <link>https://hubing688.github.io/posts/17_sdn-rdcd_ton/</link>
       <pubDate>Fri, 30 Aug 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/17_sdn-rdcd_ton/</guid>
+      <guid>https://hubing688.github.io/posts/17_sdn-rdcd_ton/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Zhou H , Wu C , Yang C , et al. SDN-RDCD: A Real-Time and Reliable Method for Detecting Compromised SDN Devices[J]. IEEE/ACM Transactions on Networking, 2018, PP(99).&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -996,9 +996,9 @@ $$P&amp;rsquo;=P((M\cap A)\cup(M\cap S)\cup S)=P((M\cap A)\cup S)=P(M\cap A)+P(S
     </item>
     <item>
       <title>SDNScore: A statistical defense mechanism against DDoS attacks in SDN environment</title>
-      <link>https://examplesite.com/posts/16_sdnscore/</link>
+      <link>https://hubing688.github.io/posts/16_sdnscore/</link>
       <pubDate>Thu, 29 Aug 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/16_sdnscore/</guid>
+      <guid>https://hubing688.github.io/posts/16_sdnscore/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Kalkan K , Gur G , Alagoz F . SDNScore: A statistical defense mechanism against DDoS attacks in SDN environment[C]// 2017 IEEE Symposium on Computers and Communications (ISCC). IEEE, 2017.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1033,9 +1033,9 @@ $$S_p=\frac{PNP_{(A=a_p,B=b_p)}/TPNP}{PCP_{(A=a_p,B=b_p,\dots)}/TPCP} \tag{1}$$
     </item>
     <item>
       <title>Atlantic : a framework for anomaly traffic detection, classification, and mitigation in SDN</title>
-      <link>https://examplesite.com/posts/15_atlantic/</link>
+      <link>https://hubing688.github.io/posts/15_atlantic/</link>
       <pubDate>Wed, 28 Aug 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/15_atlantic/</guid>
+      <guid>https://hubing688.github.io/posts/15_atlantic/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Silva A S D . Atlantic : a framework for anomaly traffic detection, classification, and mitigation in SDN[C]// Network Operations &amp;amp; Management Symposium. IEEE, 2016.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1074,9 +1074,9 @@ $$S_p=\frac{PNP_{(A=a_p,B=b_p)}/TPNP}{PCP_{(A=a_p,B=b_p,\dots)}/TPCP} \tag{1}$$
     </item>
     <item>
       <title>A Deep Learning Based DDoS Detection System in Software-Defined Networking (SDN)</title>
-      <link>https://examplesite.com/posts/14_dl_ddos_sdn/</link>
+      <link>https://hubing688.github.io/posts/14_dl_ddos_sdn/</link>
       <pubDate>Tue, 27 Aug 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/14_dl_ddos_sdn/</guid>
+      <guid>https://hubing688.github.io/posts/14_dl_ddos_sdn/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Niyaz Q , Sun W , Javaid A Y . A Deep Learning Based DDoS Detection System in Software-Defined Networking (SDN)[J]. Security &amp;amp; Safety, 2016, 4(12).&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1106,9 +1106,9 @@ ICMP：
     </item>
     <item>
       <title>Adaptive Performance Anomaly Detection in Distributed Systems Using Online SVMs</title>
-      <link>https://examplesite.com/posts/13_ad_svm_tdsc/</link>
+      <link>https://hubing688.github.io/posts/13_ad_svm_tdsc/</link>
       <pubDate>Tue, 27 Aug 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/13_ad_svm_tdsc/</guid>
+      <guid>https://hubing688.github.io/posts/13_ad_svm_tdsc/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Alvarez Cid-Fuentes J , Szabo C , Falkner K . Adaptive Performance Anomaly Detection in Distributed Systems Using Online SVMs[J]. IEEE Transactions on Dependable and Secure Computing, 2018:1-1.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1138,9 +1138,9 @@ $$\sigma_i&amp;rsquo;=(1-\frac{1}{t})\sigma_i+\frac{1}{t}(x_i&amp;rsquo;-u_i&amp
     </item>
     <item>
       <title>A Deep Learning Approach to Network Intrusion Detection</title>
-      <link>https://examplesite.com/posts/12_dl_ids/</link>
+      <link>https://hubing688.github.io/posts/12_dl_ids/</link>
       <pubDate>Mon, 26 Aug 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/12_dl_ids/</guid>
+      <guid>https://hubing688.github.io/posts/12_dl_ids/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Shone N , Ngoc T N , Phai V D , et al. A Deep Learning Approach to Network Intrusion Detection[J]. IEEE Transactions on Emerging Topics in Computational Intelligence, 2018, 2(1):41-50.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1175,9 +1175,9 @@ $$E(\theta)=\sum_{i=1}^{m}(x^{(i)}-y^{(i)})^2 \tag{5}$$&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hybrid Deep-Learning-Based Anomaly Detection Scheme for Suspicious Flow Detection in SDN: A Social Multimedia Perspective</title>
-      <link>https://examplesite.com/posts/11_dl_ad/</link>
+      <link>https://hubing688.github.io/posts/11_dl_ad/</link>
       <pubDate>Sun, 25 Aug 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/11_dl_ad/</guid>
+      <guid>https://hubing688.github.io/posts/11_dl_ad/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Garg S , Kaur K , Kumar N , et al. Hybrid Deep-Learning-Based Anomaly Detection Scheme for Suspicious Flow Detection in SDN: A Social Multimedia Perspective[J]. IEEE Transactions on Multimedia, 2019, 21(3):566-578.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1206,9 +1206,9 @@ $$&lt;/p&gt;</description>
     </item>
     <item>
       <title>Automatic test packet generation</title>
-      <link>https://examplesite.com/posts/10_packet_generation/</link>
+      <link>https://hubing688.github.io/posts/10_packet_generation/</link>
       <pubDate>Sat, 24 Aug 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/10_packet_generation/</guid>
+      <guid>https://hubing688.github.io/posts/10_packet_generation/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Zeng H , Kazemian P , Varghese G , et al. Automatic test packet generation[C]// International Conference on Emerging Networking Experiments &amp;amp; Technologies. IEEE, 2012.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1244,9 +1244,9 @@ $R(pk)=\left{
     </item>
     <item>
       <title>FOCES: Detecting Forwarding Anomalies in Software Defined Networks</title>
-      <link>https://examplesite.com/posts/09_foces/</link>
+      <link>https://hubing688.github.io/posts/09_foces/</link>
       <pubDate>Fri, 23 Aug 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/09_foces/</guid>
+      <guid>https://hubing688.github.io/posts/09_foces/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Peng Z, Xu S, Yang Z, et al. FOCES: Detecting Forwarding Anomalies in Software Defined Networks[C]// IEEE International Conference on Distributed Computing Systems. 2018.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1281,9 +1281,9 @@ $X_0=(3,4,5)^T$,&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Novel Anomaly Detection System to Asist Network Management in SDN Enviroment</title>
-      <link>https://examplesite.com/posts/08_ad_sdn/</link>
+      <link>https://hubing688.github.io/posts/08_ad_sdn/</link>
       <pubDate>Thu, 22 Aug 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/08_ad_sdn/</guid>
+      <guid>https://hubing688.github.io/posts/08_ad_sdn/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Carvalho L F , Fernandes G , Rodrigues J J P C , et al. A novel anomaly detection system to assist network management in SDN environment[C]// IEEE International Conference on Communications. IEEE, 2017.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1301,9 +1301,9 @@ $X_0=(3,4,5)^T$,&lt;/p&gt;</description>
     </item>
     <item>
       <title>A detection method for anomaly flow in software defined network</title>
-      <link>https://examplesite.com/posts/06_ad_sdn_acess/</link>
+      <link>https://hubing688.github.io/posts/06_ad_sdn_acess/</link>
       <pubDate>Wed, 21 Aug 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/06_ad_sdn_acess/</guid>
+      <guid>https://hubing688.github.io/posts/06_ad_sdn_acess/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Huijun P , Zhe S , Xuejian Z , et al. [J]. IEEE Access, 2018:1-1.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1329,9 +1329,9 @@ $p_2(\theta_i) = \frac{\#{j=(1,\cdots,n):\theta_j \ge\theta_i}}{n+1} $
     </item>
     <item>
       <title>An Analysis of Using Reflectors for Distributed Denial-of-Service Attacks</title>
-      <link>https://examplesite.com/posts/07_reflector_sigcomm/</link>
+      <link>https://hubing688.github.io/posts/07_reflector_sigcomm/</link>
       <pubDate>Tue, 20 Aug 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/07_reflector_sigcomm/</guid>
+      <guid>https://hubing688.github.io/posts/07_reflector_sigcomm/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Paxson, Vern. An analysis of using reflectors for distributed denial-of-service attacks[J]. ACM SIGCOMM Computer Communication Review, 2001, 31(3):38.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1350,9 +1350,9 @@ $p_2(\theta_i) = \frac{\#{j=(1,\cdots,n):\theta_j \ge\theta_i}}{n+1} $
     </item>
     <item>
       <title>JESS: Joint Entropy-Based DDoS Defense Scheme in SDN</title>
-      <link>https://examplesite.com/posts/04_jess/</link>
+      <link>https://hubing688.github.io/posts/04_jess/</link>
       <pubDate>Mon, 19 Aug 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/04_jess/</guid>
+      <guid>https://hubing688.github.io/posts/04_jess/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Kalkan K , Altay L , Gur G , et al. JESS: Joint Entropy Based DDoS Defense Scheme in SDN[J]. IEEE Journal on Selected Areas in Communications, 2018:1-1.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1380,9 +1380,9 @@ Entropy shows randomness,DDoS decraese randomness.&lt;/li&gt;
     </item>
     <item>
       <title>Leveraging SDN for Efficient Anomaly Detection and Mitigation on Legacy Networks</title>
-      <link>https://examplesite.com/posts/03_sdn_ad/</link>
+      <link>https://hubing688.github.io/posts/03_sdn_ad/</link>
       <pubDate>Sun, 18 Aug 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/03_sdn_ad/</guid>
+      <guid>https://hubing688.github.io/posts/03_sdn_ad/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Giotis K , Androulidakis G , Maglaris V . Leveraging SDN for Efficient Anomaly Detection and Mitigation on Legacy Networks[C]// Third European Workshop on Software Defined Networks. IEEE Computer Society, 2014.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1407,9 +1407,9 @@ Entropy shows randomness,DDoS decraese randomness.&lt;/li&gt;
     </item>
     <item>
       <title>A distributed filtering mechanism against DDoS attacks: ScoreForCore</title>
-      <link>https://examplesite.com/posts/01_scoreforcore/</link>
+      <link>https://hubing688.github.io/posts/01_scoreforcore/</link>
       <pubDate>Sat, 17 Aug 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/01_scoreforcore/</guid>
+      <guid>https://hubing688.github.io/posts/01_scoreforcore/</guid>
       <description>&lt;h1 id=&#34;a-distributed-filtering-mechanism-against-ddos-attacks-scoreforcore&#34;&gt;A distributed filtering mechanism against DDoS attacks: ScoreForCore&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Kalkan K, Alagöz F. A distributed filtering mechanism against DDoS attacks: ScoreForCore[J]. Computer Networks, 2016, 108: 199-209.&lt;/p&gt;
@@ -1444,9 +1444,9 @@ Entropy shows randomness,DDoS decraese randomness.&lt;/li&gt;
     </item>
     <item>
       <title>Crowd-GPS-Sec: Leveraging Crowdsourcing to Detect and Localize GPS Spoofing Attacks</title>
-      <link>https://examplesite.com/posts/02_crowd-gps-sec/</link>
+      <link>https://hubing688.github.io/posts/02_crowd-gps-sec/</link>
       <pubDate>Fri, 16 Aug 2019 18:32:36 +0800</pubDate>
-      <guid>https://examplesite.com/posts/02_crowd-gps-sec/</guid>
+      <guid>https://hubing688.github.io/posts/02_crowd-gps-sec/</guid>
       <description>&lt;h1 id=&#34;crowd-gps-sec-leveraging-crowdsourcing-to-detect-and-localize-gps-spoofing-attacks&#34;&gt;Crowd-GPS-Sec: Leveraging Crowdsourcing to Detect and Localize GPS Spoofing Attacks&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Jansen K, Schäfer M, Moser D, et al. Crowd-GPS-Sec: Leveraging Crowdsourcing to Detect and Localize GPS Spoofing Attacks[C] IEEE Symposium on Security and&amp;gt; Privacy (S&amp;amp;P). 2018.&lt;/p&gt;

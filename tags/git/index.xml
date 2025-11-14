@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Git on ExampleSite</title>
-    <link>https://examplesite.com/tags/git/</link>
+    <link>https://hubing688.github.io/tags/git/</link>
     <description>Recent content in Git on ExampleSite</description>
     <image>
       <title>ExampleSite</title>
-      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://hubing688.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://hubing688.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Sun, 21 Aug 2022 00:05:10 +0800</lastBuildDate>
-    <atom:link href="https://examplesite.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hubing688.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Magit的基本使用</title>
-      <link>https://examplesite.com/posts/org_05_magit_usage/</link>
+      <link>https://hubing688.github.io/posts/org_05_magit_usage/</link>
       <pubDate>Mon, 15 Aug 2022 21:01:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_05_magit_usage/</guid>
+      <guid>https://hubing688.github.io/posts/org_05_magit_usage/</guid>
       <description>&lt;h2 id=&#34;magit-的基本介绍&#34;&gt;Magit 的基本介绍&lt;/h2&gt;
 &lt;p&gt;Magit是在emacs中对git的一种扩展, 它的本质是在emacs中, 利用emacs的方式调用git的命令, 使得git的使用更加地emacs化. 本人的emacs 能力有限, 因此只介绍magit中的一些最常用的命令, 方便日常使用够用即可. 要更加全面地研究可以看它的&lt;a href=&#34;https://magit.vc/&#34;&gt;原网站&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;magit的基本介绍&#34;&gt;Magit的基本介绍&lt;/h2&gt;
@@ -26,7 +26,7 @@
 &lt;p&gt;基本上第一次需要使用M-x magit-status打开, 后面才能用C-x g快捷键, 不知道是不是什么bug.&lt;/p&gt;
 &lt;p&gt;打开后会有一个窗口(这里我事先建好了一个 git 仓库)&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/O4nM1W.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/O4nM1W.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;分析下magit 窗口每部分的意思:&lt;/p&gt;
@@ -47,9 +47,9 @@
     </item>
     <item>
       <title>Git的基本使用</title>
-      <link>https://examplesite.com/posts/org_04_git_usage/</link>
+      <link>https://hubing688.github.io/posts/org_04_git_usage/</link>
       <pubDate>Sat, 06 Aug 2022 19:28:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_04_git_usage/</guid>
+      <guid>https://hubing688.github.io/posts/org_04_git_usage/</guid>
       <description>&lt;h2 id=&#34;基础--最常用的命令&#34;&gt;基础(最常用的命令)&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git init &lt;span class=&#34;c1&#34;&gt;#初始化Git仓库&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add . &lt;span class=&#34;c1&#34;&gt;#添加所有未追踪文件或修改&lt;/span&gt;
@@ -71,9 +71,9 @@
     </item>
     <item>
       <title>Git 与 Magit 初始篇</title>
-      <link>https://examplesite.com/posts/org_03_git_get_started/</link>
+      <link>https://hubing688.github.io/posts/org_03_git_get_started/</link>
       <pubDate>Sat, 06 Aug 2022 15:17:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_03_git_get_started/</guid>
+      <guid>https://hubing688.github.io/posts/org_03_git_get_started/</guid>
       <description>&lt;h2 id=&#34;系列目的&#34;&gt;系列目的&lt;/h2&gt;
 &lt;p&gt;介绍Git的基础配置及基础使用&lt;/p&gt;
 &lt;p&gt;介绍Magit的使用, 因为Magti相比与Git方便很多, 配合Emacs效率更高&lt;/p&gt;
@@ -81,7 +81,7 @@
 &lt;p&gt;windows 中使用bash, linux或Mac下使用terminal, 总之要开使用Git, 就要用命令行&lt;/p&gt;
 &lt;p&gt;要做的第一件事是检查电脑上是否安装了Git, 使用命令: git &amp;ndash;version查看, 安装了则会返回版本号&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/15E4c8.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/15E4c8.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;没安装就去官网安装下&lt;/p&gt;

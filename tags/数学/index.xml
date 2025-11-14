@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>数学 on ExampleSite</title>
-    <link>https://examplesite.com/tags/%E6%95%B0%E5%AD%A6/</link>
+    <link>https://hubing688.github.io/tags/%E6%95%B0%E5%AD%A6/</link>
     <description>Recent content in 数学 on ExampleSite</description>
     <image>
       <title>ExampleSite</title>
-      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://hubing688.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://hubing688.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Fri, 16 Jun 2023 13:04:46 +0800</lastBuildDate>
-    <atom:link href="https://examplesite.com/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hubing688.github.io/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Elgamal算法原理总结</title>
-      <link>https://examplesite.com/posts/org_24_elgamal/</link>
+      <link>https://hubing688.github.io/posts/org_24_elgamal/</link>
       <pubDate>Fri, 16 Jun 2023 13:00:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_24_elgamal/</guid>
+      <guid>https://hubing688.github.io/posts/org_24_elgamal/</guid>
       <description>&lt;h2 id=&#34;算法流程-密钥生成-加密-解密-正确性正明&#34;&gt;算法流程: 密钥生成, 加密, 解密, 正确性正明&lt;/h2&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/Elgamal.jpg&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/Elgamal.jpg&#34;/&gt; 
 &lt;/figure&gt;</description>
     </item>
     <item>
       <title>RSA算法原理总结</title>
-      <link>https://examplesite.com/posts/org_23_rsa/</link>
+      <link>https://hubing688.github.io/posts/org_23_rsa/</link>
       <pubDate>Mon, 05 Jun 2023 13:56:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_23_rsa/</guid>
+      <guid>https://hubing688.github.io/posts/org_23_rsa/</guid>
       <description>&lt;h2 id=&#34;rsa算法流程&#34;&gt;rsa算法流程&lt;/h2&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/rsa_alg.jpg&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/rsa_alg.jpg&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;欧拉定理代码验证&#34;&gt;欧拉定理代码验证:&lt;/h2&gt;
@@ -79,26 +79,26 @@
     </item>
     <item>
       <title>马尔可夫决策过程 (Markov decision processes,MDP)</title>
-      <link>https://examplesite.com/posts/org_13_markon_decision/</link>
+      <link>https://hubing688.github.io/posts/org_13_markon_decision/</link>
       <pubDate>Tue, 04 Oct 2022 21:44:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_13_markon_decision/</guid>
+      <guid>https://hubing688.github.io/posts/org_13_markon_decision/</guid>
       <description>&lt;h2 id=&#34;马尔可夫过程&#34;&gt;马尔可夫过程&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/494755866&#34;&gt;参考自这里&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;性质--markov-property&#34;&gt;性质(Markov Property)&lt;/h3&gt;
 &lt;p&gt;马尔可夫性质指的是: 未来只与当前状态有关，与过去无关。可以使用以下定义:&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/QUGtYb.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/QUGtYb.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;可以从这个式子里面看到, 下一个状态为\(S_{t+1}\)的概率只于当前状态\(S_t\)有关, 而与更前的状态\(S_1, S_2, &amp;hellip;, S_{t-1}\)都无关.&lt;/p&gt;
 &lt;p&gt;我们对当前状态和后续状态分别记为\(s, s&amp;rsquo;\), 从当前状态转移到后续状态的转移概率定义为:&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/uojT9P.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/uojT9P.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;对于一个马尔可夫过程如果有n个状态, 那这些状态互相转换则共有\(n^2\)种转移, 将这些转移过程记为一个转q称矩阵:&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/FjfFbO.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/FjfFbO.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;h3 id=&#34;马尔可夫过程--markov-process&#34;&gt;马尔可夫过程 (Markov Process)&lt;/h3&gt;
@@ -120,7 +120,7 @@
 &lt;p&gt;则它是一个马尔可夫过程, 表示为\(&amp;lt;S,P&amp;gt;\).&lt;/p&gt;
 &lt;p&gt;以下例子: 一个学生所处状态的随机过程&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/ImP1yw.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/ImP1yw.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;这里每一个球就是随机过程中的一个状态, 箭头表示状态转移, 箭头上的数字表示转移概率.
@@ -132,12 +132,12 @@
     </item>
     <item>
       <title>Hoeffding&#39;s inequality (霍夫丁不等式讲解)</title>
-      <link>https://examplesite.com/posts/org_12_hoeffding_ineq/</link>
+      <link>https://hubing688.github.io/posts/org_12_hoeffding_ineq/</link>
       <pubDate>Mon, 26 Sep 2022 23:02:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_12_hoeffding_ineq/</guid>
+      <guid>https://hubing688.github.io/posts/org_12_hoeffding_ineq/</guid>
       <description>&lt;h2 id=&#34;霍夫丁不等式表达&#34;&gt;霍夫丁不等式表达&lt;/h2&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/xO47Lh.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/xO47Lh.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;下面的这个式子是我们常用的&lt;/p&gt;
@@ -145,7 +145,7 @@
 &lt;p&gt;一个取值非负的随机变量\(X \ge 0\), 有不等式 \(P(X \ge \epsilon) \le \frac{1}{\epsilon} \mathbb{E}X\).&lt;/p&gt;
 &lt;p&gt;这个不等式的证明:&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/rCbCCP.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/rCbCCP.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;过程中使用了微积分和一些不等式的基础, 不了解了.&lt;/p&gt;
@@ -153,7 +153,7 @@
 &lt;p&gt;对于突函数而言的一个不等式&lt;/p&gt;
 &lt;h2 id=&#34;均值不等式&#34;&gt;均值不等式&lt;/h2&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/d4SAlH.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/d4SAlH.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;这里使用的其实是对\((a - b)^2 \ge 0\)的变换, 最终得到\((a+b)^2 \ge 2 \sqrt{ab}\).&lt;/p&gt;
@@ -161,18 +161,18 @@
 &lt;p&gt;首先使用\(Y_i = X_i - \mathbb{E}_i\) 来替换原不等式, 得到新的需要证明的式子:
 这里变换后\(Y_i\)的聚会范围变了, 我们设它的聚会范围为: \(a_i \le Y_i \le b_i\)&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/upnbOL.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/upnbOL.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;这里要对上面方框中的式子使用马尔可夫不等式来放缩,但由于我们并不能保证 \(\sum Y_i \ge 0\), 因此使用e的指数对原式进行变换, 结果如下:&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/lu1wLQ.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/lu1wLQ.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;这里由于\(Y_i\) 是独立同分布的, 因此可以做变换 \(e^{-t\epsilon} \cdot \mathbb{E}[e^{t \sum Y_i}] = e^{-t \epsilon} \cdot \prod \mathbb{E}[e^{t Y_i}]\)&lt;/p&gt;
 &lt;p&gt;根据\(Y_i\)的取值范围, 我们利用\(\alpha\)来修改\(Y_i\)的表达:&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/r4jQn6.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/r4jQn6.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;再将修改后的表达带入\(e^{tY_i}\) 得:&lt;/p&gt;</description>

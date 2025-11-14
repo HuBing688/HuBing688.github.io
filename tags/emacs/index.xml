@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Emacs on ExampleSite</title>
-    <link>https://examplesite.com/tags/emacs/</link>
+    <link>https://hubing688.github.io/tags/emacs/</link>
     <description>Recent content in Emacs on ExampleSite</description>
     <image>
       <title>ExampleSite</title>
-      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://hubing688.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://hubing688.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Wed, 12 Nov 2025 17:36:39 -0400</lastBuildDate>
-    <atom:link href="https://examplesite.com/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hubing688.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs 常用技巧总结</title>
-      <link>https://examplesite.com/posts/emacs_tip/</link>
+      <link>https://hubing688.github.io/posts/emacs_tip/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 -0400</pubDate>
-      <guid>https://examplesite.com/posts/emacs_tip/</guid>
+      <guid>https://hubing688.github.io/posts/emacs_tip/</guid>
       <description>&lt;h2 id=&#34;bookmark&#34;&gt;bookmark&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;C-x r l : 列出书签&lt;/li&gt;

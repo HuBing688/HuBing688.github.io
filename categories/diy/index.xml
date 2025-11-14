@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>DIY on ExampleSite</title>
-    <link>https://examplesite.com/categories/diy/</link>
+    <link>https://hubing688.github.io/categories/diy/</link>
     <description>Recent content in DIY on ExampleSite</description>
     <image>
       <title>ExampleSite</title>
-      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://hubing688.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://hubing688.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Sat, 25 Feb 2023 19:36:31 +0800</lastBuildDate>
-    <atom:link href="https://examplesite.com/categories/diy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hubing688.github.io/categories/diy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DIY一个dactyl键盘,很喜欢这个,希望能成功</title>
-      <link>https://examplesite.com/posts/org_22_dactyl/</link>
+      <link>https://hubing688.github.io/posts/org_22_dactyl/</link>
       <pubDate>Thu, 23 Feb 2023 18:29:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_22_dactyl/</guid>
+      <guid>https://hubing688.github.io/posts/org_22_dactyl/</guid>
       <description>&lt;h2 id=&#34;资料调研&#34;&gt;资料调研&lt;/h2&gt;
 &lt;p&gt;我想要的特征: 轨迹球+键盘+无线+人体工学设计&lt;/p&gt;
 &lt;h3 id=&#34;1-dot-https-github-dot-com-alaasaadabdo-battoota&#34;&gt;1. &lt;a href=&#34;https://github.com/AlaaSaadAbdo/battoota&#34;&gt;https://github.com/AlaaSaadAbdo/battoota&lt;/a&gt;&lt;/h3&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/eXYJR9.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/eXYJR9.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;这个项目长这样,是我想要的把轨迹球融合到键盘上,但是没有人体工学设计.&lt;/p&gt;
 &lt;p&gt;尽管如此这个设计也深得我心.&lt;/p&gt;
 &lt;h3 id=&#34;2-dot-https-github-dot-com-sffubs-dactyl-manuform-gimbal&#34;&gt;2. &lt;a href=&#34;https://github.com/sffubs/dactyl_manuform_gimbal&#34;&gt;https://github.com/sffubs/dactyl_manuform_gimbal&lt;/a&gt;&lt;/h3&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/D5YNTb.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/D5YNTb.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;这个和我想要的最接近,可惜无线这块差了点,而且鼠标也不是轨迹球的.&lt;/p&gt;
@@ -39,7 +39,7 @@
 &lt;h3 id=&#34;5-dot-新参考&#34;&gt;5. 新参考&lt;/h3&gt;
 &lt;p&gt;今天又看了2个新项目, &lt;a href=&#34;https://oshwhub.com/anyiyao/dactyl-manuform-fen-ti-jian-pan&#34;&gt;这个&lt;/a&gt; 和 &lt;a href=&#34;https://oshwhub.com/dimsmary/dactyl-helloworld&#34;&gt;这个&lt;/a&gt;, 还是觉得老外的这个靠谱些, 下单了2个控制器,有点贵啊&amp;hellip;&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/E2biYd.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/E2biYd.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;文档阅读&#34;&gt;文档阅读&lt;/h2&gt;
@@ -63,7 +63,7 @@
 &lt;p&gt;&lt;a href=&#34;https://github.com/sffubs/dactyl_manuform_gimbal/blob/master/dactyl-manuform-gimbal.pro&#34;&gt;pro&lt;/a&gt;,&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/sffubs/dactyl_manuform_gimbal/blob/master/dactyl-manuform-gimbal.sch&#34;&gt;sch&lt;/a&gt;&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/pcb.jpg&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/pcb.jpg&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;h3 id=&#34;pcb相关配件&#34;&gt;PCB相关配件&lt;/h3&gt;
@@ -87,7 +87,7 @@
 &lt;li&gt;&amp;lt;../static/dactyl_manuform_gimbal/DM_right_final.step&amp;gt;&lt;/li&gt;
 &lt;li&gt;&amp;lt;../static/dactyl_manuform_gimbal/DM_right_plate_final.stl&amp;gt;&lt;/li&gt;
 &lt;li&gt;&amp;lt;../static/dactyl_manuform_gimbal/DM_right_plate_final.step&amp;gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://examplesite.com/static/dactyl_manuform_gimbal/Controller_tray.stl&#34;&gt;9&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hubing688.github.io/static/dactyl_manuform_gimbal/Controller_tray.stl&#34;&gt;9&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;./dactyl_manuform_gimbal/DM_OLED_clip.stl&#34;&gt;aa&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;

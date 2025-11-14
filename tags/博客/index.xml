@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>博客 on ExampleSite</title>
-    <link>https://examplesite.com/tags/%E5%8D%9A%E5%AE%A2/</link>
+    <link>https://hubing688.github.io/tags/%E5%8D%9A%E5%AE%A2/</link>
     <description>Recent content in 博客 on ExampleSite</description>
     <image>
       <title>ExampleSite</title>
-      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://hubing688.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://hubing688.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <lastBuildDate>Wed, 12 Nov 2025 16:47:31 -0400</lastBuildDate>
-    <atom:link href="https://examplesite.com/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hubing688.github.io/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用emacs写hugo博客</title>
-      <link>https://examplesite.com/posts/org_02_hugo_with_emacs/</link>
+      <link>https://hubing688.github.io/posts/org_02_hugo_with_emacs/</link>
       <pubDate>Wed, 12 Nov 2025 16:45:00 -0400</pubDate>
-      <guid>https://examplesite.com/posts/org_02_hugo_with_emacs/</guid>
+      <guid>https://hubing688.github.io/posts/org_02_hugo_with_emacs/</guid>
       <description>&lt;h2 id=&#34;当下问题-这是一级标题&#34;&gt;当下问题（这是一级标题）&lt;/h2&gt;
 &lt;h3 id=&#34;多级标题在网页上无法很好显示-这是二级标题&#34;&gt;多级标题在网页上无法很好显示（这是二级标题）&lt;/h3&gt;
 &lt;h4 id=&#34;不知道是doit主题问题-还是ox-hugo的问题-这是三级标题&#34;&gt;不知道是DoIt主题问题，还是ox-hugo的问题（这是三级标题）&lt;/h4&gt;
@@ -38,7 +38,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;这时在org模式里就可以使用hugo了&lt;/strong&gt;
 C-c C-e时会多一个导出选项:&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/L34IX7.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/L34IX7.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;如果按以上操作, 有这一项出来, 那么ox-hugo才算成功, 没有就排查错误, 比如ox-hugo有没有安装上, 配置信息有没有加对地方&lt;/p&gt;
@@ -58,9 +58,9 @@ C-c C-e时会多一个导出选项:&lt;/p&gt;
     </item>
     <item>
       <title>hugo安装与入门</title>
-      <link>https://examplesite.com/posts/org_01_hugo_install/</link>
+      <link>https://hubing688.github.io/posts/org_01_hugo_install/</link>
       <pubDate>Thu, 04 Aug 2022 00:52:00 +0800</pubDate>
-      <guid>https://examplesite.com/posts/org_01_hugo_install/</guid>
+      <guid>https://hubing688.github.io/posts/org_01_hugo_install/</guid>
       <description>&lt;h2 id=&#34;ubuntu-18-dot-04安装hugo最新稳定版&#34;&gt;ubuntu 18.04安装hugo最新稳定版&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;在站上下载安装包
@@ -76,7 +76,7 @@ C-c C-e时会多一个导出选项:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo hugo
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;即可显示提示信息, 若不这样显示, 就是出错了, 网上查别的教程吧&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://examplesite.com/ox-hugo/6p39MA.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://hubing688.github.io/ox-hugo/6p39MA.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;至此安装完成&lt;/p&gt;
